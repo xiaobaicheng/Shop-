@@ -29,4 +29,5 @@ export default {
 
 <style lang="less" scoped>
 @import "assets/css/reset.css";
+
 </style>

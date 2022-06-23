@@ -6,7 +6,7 @@ import axios from 'axios'
 
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
-import { Tabbar, TabbarItem,Button,PullRefresh,Search ,Icon    } from 'vant';
+import { Tabbar, TabbarItem,Button,PullRefresh,Search ,Icon , ActionBar, ActionBarIcon, ActionBarButton ,SwipeCell   } from 'vant';
 
 import 'vant/lib/index.css';
 
@@ -17,6 +17,10 @@ app.use(Button);
 app.use(PullRefresh);
 app.use(Search );
 app.use(Icon );
+app.use(ActionBar );
+app.use(ActionBarIcon );
+app.use(ActionBarButton );
+app.use(SwipeCell )
 app.use(ElementPlus)
 axios.defaults.baseURL="http://localhost:4001";
 app.config.globalProperties.$axios=axios

@@ -5,6 +5,7 @@ import Community from '../views/Community.vue'
 import Classification from '../views/Classification.vue'
 import About from '../views/About.vue'
 import Dtile from '../views/Dtile.vue'
+import Login from '../views/Login.vue'
 
 const routes = [
   {
@@ -20,7 +21,7 @@ const routes = [
     name: 'About',
     component:About,
     meta: {
-      keepAlive: true//导航栏在该页面显示
+      keepAlive: false//导航栏在该页面显示
     },
   },
   {
@@ -51,6 +52,14 @@ const routes = [
     path: '/Dtile',
     name: 'Dtile',
     component:Dtile,
+    meta: {
+      keepAlive: false//导航栏在该页面显示
+    },
+  },
+  {
+    path: '/Login',
+    name: 'Login',
+    component:Login,
     meta: {
       keepAlive: false//导航栏在该页面显示
     },

@@ -23,7 +23,6 @@ header {
   width: 100%;
   padding-top: 20px;
   display: flex;
-  position:fixed;
   .head{
     display: flex;
     justify-content: space-around;

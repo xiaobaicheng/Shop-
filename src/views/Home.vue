@@ -166,7 +166,9 @@ export default {
       isswitch2: false,
       isswitch3: false,
       isswitch4: false,
-      shopdata:[]
+      shopdata:[],
+      Xdata:[],
+      Smdata:[]
     };
   },
   created() {
@@ -176,8 +178,9 @@ export default {
   methods: {
     async getdata() {
       let { data } = await this.$axios.get("/home");
-      this.shopdata = data.data.splice(0,8)
-      console.log(this.shopdata);
+      this.Xdata =  data.data.splice(0,8)
+      this.shopdata = this.Xdata 
+    this.Smdata = data.data
     },
     swith(index) {
       console.log(index);
@@ -199,6 +202,7 @@ export default {
         this.isswitch4 = false;
         this.isswitch1 = false;
         this.isswitch3 = false;
+        this.shopdata =  this.Smdata
       } else if (index == 3) {
         this.isswitch3 = true;
         this.isswitch = false;
@@ -211,6 +215,8 @@ export default {
         this.isswitch4 = false;
         this.isswitch1 = false;
         this.isswitch3 = false;
+       this.shopdata = this.Xdata 
+
       }
     },
     godetile(id){
@@ -296,7 +302,7 @@ export default {
   height: 410px;
   width: 60%;
   margin: auto;
-  padding-top: 7%;
+  padding-top: 17%;
   img {
     height: 100%;
     // width: 100%;
@@ -304,10 +310,12 @@ export default {
 }
 .nav {
   // position: fixed;
-  // top: -100px;
-  height: 80vh;
+  // top: -100p
+  // position: ;
   // background-color: cadetblue;
+  outline: 1px black solid;
   width: 100%;
+  margin-top: -10%;
   background: url(http://static.shihuocdn.cn/admin/files/20210303/fc8bbceb69b5334031a71ffeaceca55d.png?imageslim&imageView2/2/w/2600)
     100%/100%;
 }
